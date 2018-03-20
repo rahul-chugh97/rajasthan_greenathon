@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "961095090657",
+    "firebase_url": "https://solarpesa.firebaseio.com",
+    "project_id": "solarpesa",
+    "storage_bucket": "solarpesa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961095090657:android:732e9c0d245280a8",
+        "android_client_info": {
+          "package_name": "com.specico.solarpesa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961095090657-47n4j39neh17a9jk76pmuseukj2mukh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX7ygNbrC8PIIV8LRtdmOIGCQl5Ib0JQg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961095090657-47n4j39neh17a9jk76pmuseukj2mukh4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

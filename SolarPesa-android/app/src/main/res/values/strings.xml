@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">SolarPesa</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_home">Home</string>
+    <string name="title_services">Services</string>
+    <string name="title_history">History</string>
+    <string name="title_notice">Notice Board</string>
+    <string name="title_chat">Chat</string>
+    <string name="facebook_app_id">194022664682494</string>
+    <string name="fb_login_protocol_scheme">fb194022664682494</string>
+    <string name="this_field_required">This field is Required</string>
+    <string name="ten_digit_mobile_number">Mobile Number must be 10 digits</string>
+    <string name="password_minimum_6_length">Password must be of minimum 6 length</string>
+    <string name="name_cannot_be_empty">Name cannot be Empty</string>
+    <string name="not_valid_email">Not a valid Email Address</string>
+    <string name="society_cannot_be_empty">Society cannot be Empty</string>
+    <string name="flat_cannot_be_empty">Flat cannot be Empty</string>
+    <string name="password_not_correct">Incorrect Password. Try Again</string>
+    <string name="dob_is_required">Date of Birth is required</string>
+    <string name="address_cannot_be_empty">Address cannot be empty</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>

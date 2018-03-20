@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.specico.aparten.ProfileActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_back" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Update Profile"
+                android:layout_centerInParent="true"
+                android:textSize="18sp"
+                android:textColor="#000"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/toolbar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/picture_box"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/circle_shape"
+            android:padding="4dp"
+            android:layout_centerHorizontal="true">
+
+        <com.christophesmet.android.views.maskableframelayout.MaskableFrameLayout
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            app:porterduffxfermode="DST_IN"
+            app:mask="@drawable/circle_mask">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_image"/>
+
+                <Button
+                    android:id="@+id/btnUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#80888888"
+                    android:layout_alignParentBottom="true"
+                    android:text="UPLOAD"/>
+            </RelativeLayout>
+
+        </com.christophesmet.android.views.maskableframelayout.MaskableFrameLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvPersonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_below="@+id/picture_box"
+            android:text="Personal Details"/>
+
+        <LinearLayout
+            android:id="@+id/login_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/tvPersonal">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:letterSpacing="0.1"
+                android:focusedByDefault="false"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="Password"
+                app:met_floatingLabelTextColor="@color/colorPrimaryDark"
+                app:met_primaryColor="@color/colorAccent"
+                android:layout_centerHorizontal="true"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:maxLength="13"
+                android:letterSpacing="0.1"
+                android:focusedByDefault="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="Mobile Number"
+                app:met_floatingLabelTextColor="@color/colorPrimaryDark"
+                app:met_primaryColor="@color/colorAccent"
+                app:met_singleLineEllipsis="true"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_box"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Full Name"
+            android:inputType="text"
+            android:focusedByDefault="false"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="Full Name"
+            app:met_floatingLabelTextColor="@color/colorPrimaryDark"
+            app:met_primaryColor="@color/colorAccent"
+            app:met_singleLineEllipsis="true"
+            android:layout_centerHorizontal="true" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:focusedByDefault="false"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="Email"
+            app:met_floatingLabelTextColor="@color/colorPrimaryDark"
+            app:met_primaryColor="@color/colorAccent"
+            app:met_singleLineEllipsis="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_below="@+id/etEmail"
+            android:text="Residential Address"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAddress"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="House No, Street, Locality"
+            android:inputType="text"
+            android:focusedByDefault="false"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="Street Address"
+            app:met_floatingLabelTextColor="@color/colorPrimaryDark"
+            app:met_primaryColor="@color/colorAccent"
+            app:met_singleLineEllipsis="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tvState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_below="@+id/etAddress"
+            android:text="State"/>
+        <TextView
+            android:id="@+id/tvStateError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="#ff0000"
+            android:textSize="10sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@+id/etAddress"
+            android:text="Select your State"
+            android:visibility="gone"/>
+
+        <Spinner
+            android:id="@+id/spinnerState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/tvState" />
+
+        <TextView
+            android:id="@+id/tvDistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/spinnerState"
+            android:text="District"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvDistrictError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="#ff0000"
+            android:textSize="10sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@+id/spinnerState"
+            android:text="Select your District"
+            android:visibility="gone"/>
+
+        <Spinner
+            android:id="@+id/spinnerDistrict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/tvDistrict"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerDistrict"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/continue_btn_back"
+            android:letterSpacing="0.1"
+            android:text="CONTINUE"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <io.saeid.fabloading.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:translationZ="10dp"
+        android:elevation="10dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:mfl_duration="400"
+        app:mfl_repeat="1" />
+
+</RelativeLayout>
